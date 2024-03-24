@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  web:
+    build: '.'
+    image: rest
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+      - .flaskenv
+
+
+  redis:
+    image: rest
+
+    container_name: rq_workers_container
+
+    command: sh -c "rq worker --with-scheduler -u rediss://red-cnti3j8l6cac73d696vg:yhwfNBSDGnkhFvi0s3wHvNms2Uua8pCl@singapore-redis.render.com:6379 emails"
+
+    working_dir: /app
+
+    depends_on:
+      
+    - web

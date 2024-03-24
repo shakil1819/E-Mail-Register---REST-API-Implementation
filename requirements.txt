@@ -1,0 +1,15 @@
+flask==2.3.2
+flask-smorest
+python-dotenv
+sqlalchemy
+flask-sqlalchemy
+flask-jwt-extended
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
+passlib
+flask-migrate
+gunicorn
+requests
+redis
+rq

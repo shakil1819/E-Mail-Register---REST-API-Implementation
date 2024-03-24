@@ -17,7 +17,7 @@ def send_user_registration_email(subject, message, user_email):
     #emailMsg = f'Welcome to our platform, {user}!'
     mimeMessage = MIMEMultipart()
     mimeMessage['to'] = user_email
-    mimeMessage['subject'] = 'Registration Confirmation Email'
+    mimeMessage['subject'] = subject
     mimeMessage.attach(MIMEText(message, 'plain'))
     raw_string = base64.urlsafe_b64encode(mimeMessage.as_bytes()).decode()
     try:
@@ -27,4 +27,4 @@ def send_user_registration_email(subject, message, user_email):
         print("An error occurred while sending the email:", e)
 
 # Example usage:
-# send_user_registration_email('Welcome!', 'example@gmail.com', 'John Doe')
+#send_user_registration_email('Welcomre!', 'Jorhn Doe', 'shakilmrf8@gmail.com')

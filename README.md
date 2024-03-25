@@ -1,7 +1,7 @@
 <h1 align="center">E-Mail Project In REST API using GMAIL API, Flask, SQLAlchemy, SQLite, Docker</h1>
 
 
-<div>
+<p align="center">
 <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" />
 <img src="https://img.shields.io/badge/SQLAlchemy-red?style=for-the-badge&logo=sqlalchemy&logoColor=white" />
 <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
@@ -9,7 +9,8 @@
 <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" />
 <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
 <img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
-</div>
+<img src="https://img.shields.io/badge/REST API-EA4335?style=for-the-badge&logo=rest&logoColor=white" />
+</p>
 
 ## Tree of Directory
 

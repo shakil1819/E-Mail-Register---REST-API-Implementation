@@ -123,7 +123,8 @@ To delete all users from the database, make a DELETE request to `/deleteall`.
 
 ## To Do's:
 ---After Meeting on Apr 1, 2024, 10:30 ~ 11:00---
-[ ] Run from Locally installed redis
-[ ] Production server
-[ ] run rq locally , update task management accordingly
-[ ] invalid email error endpoint solve (write endpoint by yourself, if user send invalid mail address, or it is not found, then how it should be identified?)
+
+[ ]  Run from Locally installed redis
+[ ]  Production server
+[ ]  run rq locally , update task management accordingly
+[ ]  invalid email error endpoint solve (write endpoint by yourself, if user send invalid mail address,    or it is not found, then how it should be identified?)

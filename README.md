@@ -125,6 +125,6 @@ To delete all users from the database, make a DELETE request to `/deleteall`.
 ---After Meeting on Apr 1, 2024, 10:30 ~ 11:00---
 
 - [ ] Run from Locally installed redis
-- [ ] Production server (alternative of flask,use gunicorn) [Solved at commit b40f1070249fb9d2e88255e713d59cc6420d2319]
+- [ ] Production server (alternative of flask,use gunicorn) - Solved at commit b40f1070249fb9d2e88255e713d59cc6420d2319 
 - [ ] run rq locally, update task management accordingly
-- [ ] invalid email error endpoint solve (write endpoint by yourself, if user send invalid mail address, or it is not found, then how it should be identified?)(solved at commit dd325cd616af6c36c5c85bd196dbcc7f890b42ba)
+- [ ] invalid email error endpoint solve (write endpoint by yourself, if user send invalid mail address, or it is not found, then how it should be identified?)- solved at commit dd325cd616af6c36c5c85bd196dbcc7f890b42ba

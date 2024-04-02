@@ -3,6 +3,7 @@ import redis
 from flask.views import MethodView
 from flask_smorest import Blueprint, abort
 from passlib.hash import pbkdf2_sha256
+from flask_migrate import Migrate
 from rq import Queue
 from flask import current_app,jsonify
 from sqlalchemy import or_
@@ -12,7 +13,7 @@ from blocklist import BLOCKLIST
 from models import UserModel
 from schemas import UserSchema#, UserRegisterSchema
 from tasks import send_user_registration_email
-
+from validate_email import validate_email
 
 blp = Blueprint("Users", "users", description="Operations on users")
 connection = redis.from_url(
@@ -27,6 +28,11 @@ class UserRegister(MethodView):
     def post(self, user_data):
         if UserModel.query.filter(UserModel.email == user_data["email"]).first():
             abort(409, message="A user with that username or email already exists.")
+
+        is_valid = validate_email(user_data["email"])
+        #print(is_valid) 
+        if not is_valid:
+            abort(400, message="Invalid email address.")
 
         user = UserModel(
             username=user_data["username"],

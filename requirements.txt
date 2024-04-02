@@ -13,3 +13,4 @@ gunicorn
 requests
 redis
 rq
+py3-validate-email

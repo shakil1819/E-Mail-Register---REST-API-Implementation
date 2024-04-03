@@ -14,3 +14,4 @@ requests
 redis
 rq
 py3-validate-email
+validate_email

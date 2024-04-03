@@ -124,7 +124,7 @@ To delete all users from the database, make a DELETE request to `/deleteall`.
 ## To Do's:
 ---After Meeting on Apr 1, 2024, 10:30 ~ 11:00---
 
-- [ ] Run from Locally installed redis
-- [ ] Production server (alternative of flask,use gunicorn) - Solved at commit b40f1070249fb9d2e88255e713d59cc6420d2319 
-- [ ] run rq locally, update task management accordingly
-- [ ] invalid email error endpoint solve (write endpoint by yourself, if user send invalid mail address, or it is not found, then how it should be identified?)- solved at commit dd325cd616af6c36c5c85bd196dbcc7f890b42ba
+- [ ] Run from Locally installed redis => [commit](https://github.com/shakil1819/E-Mail-Register---REST-API-Implementation/commit/1065acff77a0a2cb2171a2664114ec7f04cfa1cb)
+- [ ] Production server (alternative of flask,use gunicorn) => [commit](https://github.com/shakil1819/E-Mail-Register---REST-API-Implementation/commit/b40f1070249fb9d2e88255e713d59cc6420d2319)
+- [ ] run rq locally, update task management accordingly => [commit](https://github.com/shakil1819/E-Mail-Register---REST-API-Implementation/commit/1065acff77a0a2cb2171a2664114ec7f04cfa1cb)
+- [ ] invalid email error endpoint solve (write endpoint by yourself, if user send invalid mail address, or it is not found, then how it should be identified?) => [commit](https://github.com/shakil1819/E-Mail-Register---REST-API-Implementation/commit/dd325cd616af6c36c5c85bd196dbcc7f890b42ba)

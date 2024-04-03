@@ -11,7 +11,7 @@ from db import db
 from blocklist import BLOCKLIST
 import models
 from models.user import UserModel
-
+from redis import Redis
 from resources.user import blp as UserBlueprint
 
 
@@ -19,9 +19,11 @@ def create_app(db_url=None):
     app = Flask(__name__)
     load_dotenv()
 
-    connection = redis.from_url(
-        os.getenv("REDIS_URL")
-    )
+    # connection = redis.from_url(
+    #     os.getenv("REDIS_URL")
+    # )
+    connection=Redis(host='redis',port=6379)
+    # connection=Redis(host='rq_worker',port=6379)
     app.queue = Queue("emails", connection=connection)
     app.config["PROPAGATE_EXCEPTIONS"] = True
     app.config["API_TITLE"] = "Stores REST API"

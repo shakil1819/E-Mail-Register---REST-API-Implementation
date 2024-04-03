@@ -6,3 +6,5 @@ data.db
 *.pyc
 .DS_Store
 token_gmail_v1.pickle
+tree.txt
+dump.rdb

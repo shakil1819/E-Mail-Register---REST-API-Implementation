@@ -7,18 +7,22 @@ from flask_migrate import Migrate
 from rq import Queue
 from flask import current_app,jsonify
 from sqlalchemy import or_
-
+from redis import Redis
 from db import db
 from blocklist import BLOCKLIST
 from models import UserModel
 from schemas import UserSchema#, UserRegisterSchema
 from tasks import send_user_registration_email
 from validate_email import validate_email
+from dotenv import load_dotenv
+load_dotenv()
 
 blp = Blueprint("Users", "users", description="Operations on users")
-connection = redis.from_url(
-    os.getenv("REDIS_URL")
-)
+# connection = redis.from_url((host)
+#     os.getenv("REDIS_URL")
+# )
+connection=Redis(host='redis',port=6379)
+# connection=Redis(host='rq_worker',port=6379)
 queue = Queue("emails", connection=connection)
 
 
